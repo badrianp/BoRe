@@ -1,0 +1,78 @@
+body{
+    height: 100%;
+    width: 100%;
+    background-color: wheat;
+    margin: 5% 5% 5% 5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+}
+.loginDiv{
+    position: relative;
+    width: 60%;
+    height: 90%;
+    margin: 3% 5% 3% 5%;
+    border-radius: 15px;
+    background-color: lemonchiffon;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.loginLabel{
+    position: relative;
+    color: black;
+    background-color: lightcoral;
+    margin: 10% 15% 10% 15%;
+    padding: 2% 5% 2% 5%;
+    border-radius: 0.6em ;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+
+}
+.labelItem{
+    font-family: monospace;
+    position: relative;
+    
+    width: 80%;
+    
+    padding: 0.5em 1em 0.5em 1em;
+    
+    border-radius: 0.2em;
+    border: #F6D7B8;
+
+    background-color: whitesmoke;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#welcomeText{
+    padding: 0.3em 0.8em;
+    font-family: cursive;
+    position: relative;
+    margin: 2em 2em 1em 2em;
+    color: darkolivegreen;
+}
+
+#submit{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    position: relative;
+    background: lightseagreen;
+    border-radius: 2em;
+    margin: 3% 6% 3% 6%;
+    padding: 3% 6% 3% 6%;
+
+}
+#signUp{
+    padding: 0.5em 0.8em;
+    font-size: small;
+    color: dimgrey;
+}
+#signUpLink{
+    color: goldenrod;
+}

@@ -1,0 +1,225 @@
+html{
+    
+    padding: 0%;
+    background-size: cover;
+    /* background-color: rgb(130, 129, 123); */
+    background-image: url('wallpapergray.jpg');
+}
+body{
+
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+
+}
+.loginDiv{
+    
+    position: relative;
+    height: 85vh;
+    width: 85vw;
+    margin: 3vw 5vh 3vw 5vh;
+    border-radius: 2em;
+    background-color: rgba(255, 255, 255, 0.5);
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: space-around;
+    opacity: 0.7;
+    box-shadow: white ;
+
+}
+
+background.loginDiv{
+    opacity: 50%;
+}
+
+.cardDiv1{
+    
+    height: 30vh;
+    margin: 3% 3%;
+    font-size: 1.8vw;
+    padding: 0.3em 0.8em;
+    font-family: cursive;
+    position: relative;
+    min-width: 20vw ;
+    min-height: 20vh;
+
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center ;
+    align-items: center;
+    
+}
+
+
+
+
+.button{
+    
+    width: 40vw;
+    height: 7vh;
+    color: ghostwhite;
+    border: none;
+    padding: 5px 5px 5px 5px;
+    margin: 0.8em 0.3em;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    
+    position: relative;
+    font-size: 2vw;
+    border-radius: 0.5em;
+    background-color: rgb(190, 233, 219);
+
+
+}
+
+.cardDiv2{
+    
+    height: 30vh;
+    margin: 3% 3%;
+    font-family: cursive;
+    position: relative;
+    min-width: 20vw ;
+    min-height: 20vh;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+
+}
+
+
+#welcomeText{
+
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 3vw;
+    color: darkolivegreen;
+    
+}
+
+#SignUpText{
+    margin: 0;
+    padding: 0em 0.8em;
+    font-family: cursive;
+    font-size: 2.vw;
+    color: dimgrey;
+
+}
+
+#signUpButton{
+
+    margin-top: 0.3vh;
+    background-color: lightsteelblue ;
+    border: none;
+    
+}
+
+#guestText{
+
+    margin-bottom: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 1.5vw;
+    color: darkolivegreen;
+}
+
+#guestLoginButton{
+    border: none;
+    margin-top: 0.3vh;
+    position: relative;
+    font-style: oblique;
+    background-color: lightsteelblue ;
+}
+
+.labelItem{
+    
+    font-family: cursive;
+    font-size: 2.1vw;
+    position: relative;
+    color: chocolate;
+    width: 75%;
+    padding: 0.5em 1em 0.5em 1em;
+    border-style: none none solid none;
+    border-radius: 0.4em;
+    border-bottom: 0.05em solid burlywood ;
+    background-color: whitesmoke;
+    
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+@media screen and (orientation: portrait){
+
+    .loginDiv{
+        display: flex;
+        justify-content: center;
+    }
+
+    .cardDiv1{
+        display: flex;
+        justify-content: flex-end;
+        align-self: flex-end;
+
+    }
+
+    .cardDiv2{
+        display: flex;
+        justify-content: flex-start;
+    }
+
+    .button{
+       border-radius: 2em; 
+       font-size: 4.5vw;
+       width: 60vw;
+    }
+
+    .button:hover{
+        opacity: 1;
+    }
+
+    #welcomeText{
+        font-size: 5vw;
+    }
+
+}
+
+@media screen and (orientation: landscape){
+
+    .loginDiv{
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    .cardDiv1{
+        display: flex;
+        flex-flow: column nowrap;
+        /* justify-content: center; */
+
+    }
+
+    .cardDiv2{
+        display: flex;
+        flex-flow: column nowrap;
+    }
+
+    .button{
+        min-height: 50px ;
+        border-radius: 1.5em ;
+    }
+
+    .button:hover{
+        opacity: 1;
+    }
+    
+    #logInButton{
+        width: 35vw;
+        border-radius: 0.7em;
+        /* height: 5vw; */
+    }
+
+}
+
