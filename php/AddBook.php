@@ -1,18 +1,18 @@
 <?php   
     session_Start();
-        echo('connected!');
+        // echo('connected!');
         $titlu=$_POST['titlu'];
         $autor=$_POST['autor'];
         $gen=$_POST['gen'];
         // $bookid=$_POST['bookID'];
-
+        echo('parameters collected');
         $con = mysqli_connect('localhost','root','','boredb');
         if (!$con)
         {
             die('Could not connect: ' . mysqli_error($con));
         }
 
-        if(isset($_SESSION["email"]))
+        if(isset($_SESSION["userID"]))
         {
             $max=0;
             echo('isset!');

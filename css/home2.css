@@ -2,14 +2,14 @@ html{
     height: 100%;
     margin: 0;
     background-color: whitesmoke;
-    background-image: url("background2.jpg") ;
+    background-image: url("../images/background2.jpg") ;
     background-size: contain;
     background-repeat: repeat-y;
     
 }
 
 body{
-    height: 100%;
+    min-height: 100%;
     margin: 0;
     position: relative;
     display: flex;
@@ -90,7 +90,7 @@ body{
     border-radius: 1em;
     border: 0.04em solid green;
     background-color: azure;
-    background-image: url("search.png");
+    background-image: url("../images/search.png");
     background-repeat: no-repeat;
     background-position: 95% 50%;
     background-size: 17px 17px; 
@@ -100,8 +100,8 @@ body{
 
 .buttonImage{
 
-    /* height: 30%; */
-    width: 20%;
+    height: 45%;
+    /* width: 20%; */
 }
 
 .tooltipButton{
@@ -137,12 +137,12 @@ body{
 
 .postCards{
 
-    height: 80vh;
-    width: 90%;
-    margin-top: 30vh;
+    height: 100%;
+    width: 75%;
+    margin-top: 20%;
     position: absolute;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: stretch;
     flex-flow: column nowrap;
     align-items: center;
 }
@@ -152,20 +152,20 @@ body{
     /* border: 0.05em solid lightgray; */
     position: relative;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: stretch;
     flex-flow: row nowrap;
 }
 
 #postCard{
 
-    font-size: medium;
+    font-size: 90%;
     border-radius: 5px;
     padding: 5px;
-    background-color: rgba(112, 128, 144);
+    background-color: rgb(200, 204, 164);
     margin-bottom: 2em;
     height: 95%;
-    width: 80%;
-    min-height: 130px;
+    /* width: 100%; */
+    min-height: 230px;
     min-width: 220px;
     max-width: 670px;
     /* overflow: hidden; */

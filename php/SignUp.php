@@ -8,7 +8,7 @@
 
     <title>SignUp</title>
 
-    <link href="signuppage.css" rel="stylesheet">
+    <link href="../css/signuppage.css" rel="stylesheet">
 
     <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.1.min.js"></script>
 
@@ -23,13 +23,13 @@
 
         <input name="username" type="text" class="signUpLabel" id="name" required placeholder="name:">
 
-        <input name="email" type="email" id="email" class="signUpLabel" placeholder="email:">
+        <input name="email" type="email" id="email" class="signUpLabel" required placeholder="email:">
 
-        <input name="telephone" type="text" id="telephone" class="signUpLabel" placeholder="telephone number:">
+        <input name="telephone" type="text" id="telephone" class="signUpLabel" required placeholder="telephone number:">
 
-        <input name="password"   type="password" id="password1" class="signUpLabel" placeholder="set password:">
+        <input name="password"   type="password" id="password1" class="signUpLabel" required placeholder="set password:">
 
-        <input name="confirm-password" type="password" id="password" class="signUpLabel" placeholder="confirm password:">
+        <input name="confirm-password" type="password" id="password" class="signUpLabel" required placeholder="confirm password:">
 
         <p id="termsText">By signing up you agree to our <a id="termsLink" href="termsOfUsage.html">Terms of Use</a></p>
 
@@ -45,23 +45,10 @@
     {
 
         e.preventDefault(); 
-        if($('input[name="telephone"]').val()== "" || $('input[name="username"]').val()== "" || $('input[name="password"]').val()== "" || $('input[name="confirm-password"]').val()== "" || $('input[name="email"]').val()== "" )
-        {
-            alert("Please fill all fields!")
-            return;
-        }
-
-        if($('input[name="password"]').val().length<8)
-        {
-            alert("Password must contain at least 8 characters");
-            $('input[name="password"]').val("");
-            $('input[name="confirm-password"]').val("");
-            return;
-        }
-        else if($('input[name="password"]').val()!=$('input[name="confirm-password"]').val())
+        if($('input[name="password"]').val()!=$('input[name="confirm-password"]').val())
         {
             alert("Passwords doesn't match!");
-            $('input[name="password"]').val("");
+            // $('input[name="password"]').val("");
             $('input[name="confirm-password"]').val("");
 
             return;

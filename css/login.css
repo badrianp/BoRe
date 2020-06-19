@@ -3,7 +3,7 @@ html{
     padding: 0%;
     background-size: cover;
     /* background-color: rgb(130, 129, 123); */
-    background-image: url('wallpapergray.jpg');
+    background-image: url('../images/wallpapergray.jpg');
 }
 body{
 

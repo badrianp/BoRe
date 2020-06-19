@@ -5,7 +5,7 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>BoRe</title>
-        <link rel="stylesheet" href="homepage.css">
+        <link rel="stylesheet" href="../css/homepage.css">
         <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.1.min.js"></script>
     </head>
 
@@ -14,7 +14,7 @@
         <div id="meniuBar" class="meniuBar">
 
             <div class="tooltipButton">
-                <button id="home" class="meniuBtn"><img class="buttonImage" src="home.png"></button>
+                <button id="home" class="meniuBtn"><img class="buttonImage" src="../images/home.png"></button>
                 <spam class="tooltipInfo">Home</spam>
             </div>
 
@@ -23,22 +23,22 @@
             <div class="meniuDiv">
 
                 <div class="tooltipButton">
-                    <button id="groups" class="meniuBtn"><img class="buttonImage" src="group.png"></button>
+                    <button id="groups" class="meniuBtn"><img class="buttonImage" src="../images/group.png"></button>
                     <spam class="tooltipInfo">My Groups</spam>
                 </div>
 
                 <div class="tooltipButton">
-                    <button id="mybooks" class="meniuBtn" onclick="window.location.href='MyBooks.php';"><img class="buttonImage" src="book.png"></button>
+                    <button id="mybooks" class="meniuBtn" onclick="window.location.href='../php/MyBooks.php';"><img class="buttonImage" src="../images/book.png"></button>
                     <spam class="tooltipInfo">My Books</spam>
                 </div>
 
                 <div class="tooltipButton">
-                    <button id="notifications" class="meniuBtn"><img class="buttonImage" src="notification.png"></button>
+                    <button id="notifications" class="meniuBtn"><img class="buttonImage" src="../images/notification.png"></button>
                     <spam class="tooltipInfo">Notifications</spam>
                 </div>
 
                 <div class="tooltipButton">
-                    <button id="profile" class="meniuBtn" onclick="window.location.href='Profile.php';" ><img class="buttonImage" src="user (1).png"></button>
+                    <button id="profile" class="meniuBtn" onclick="window.location.href='../php/Profile.php';" ><img class="buttonImage" src="../images/user (1).png"></button>
                     <spam class="tooltipInfo">Profile</spam>
                 </div>
                 
@@ -71,7 +71,7 @@
                     echo "
                         <div class=postCard id=postCard>
                             
-                            <img class=postCard id=postCardImage src=".$row["imagine"]." alt=".$row["titlu"].">
+                            <img class=postCard id=postCardImage src=../images/".$row["imagine"]." alt=".$row["titlu"].">
                         
                             <div class=postCard id=postCardContent>
                             
@@ -93,7 +93,7 @@
 
                             </div>
                             
-                            <button type=button onclick='AddBook();' id='addBook'> <img src='reading.png' id='addBookIcon'></button>
+                            <button type=button onclick='AddBook();' id='addBook'> <img src='../images/reading.png' id='addBookIcon'></button>
 
                         </div>"
                     ;
@@ -118,24 +118,24 @@
     <script>
 
 
-        $("#profile").click(
-            function(e){
-                
-                location.replace("Profile.php");
-            }
-        )
-        
-        // $("#mybooks").click(
+        // $("#profile").click(
         //     function(e){
                 
-        //         location.replace("MyBooks.php");
+        //         location.replace("../php/Profile.php");
         //     }
         // )
+        
+        $("#mybooks").click(
+            function(e){
+                
+                location.replace("../php/MyBooks.php");
+            }
+        )
 
         $("#addBook").click(
             
             function(){
-                location.replace("MyBooks.php");
+                location.replace("../php/MyBooks.php");
             }
         )
     

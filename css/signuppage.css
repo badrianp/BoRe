@@ -3,7 +3,7 @@ html{
     margin: 0;
     background-size: cover;
     background-color: rgb(202, 238, 226);
-    background-image: url('arrows.jpg');
+    background-image: url('../images/arrows.jpg');
 
 }
 body{
@@ -96,7 +96,7 @@ body{
     opacity: 70%;
     border: 2px solid black;
     margin: 0;
-    background-image: url(straight.png);
+    background-image: url(../images/straight.png);
     background-position: 50% 50%;
     background-size: 7% ;
     background-repeat: no-repeat;
