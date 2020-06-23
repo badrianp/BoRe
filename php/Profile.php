@@ -4,7 +4,7 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Document</title>
-        <link rel="stylesheet" href="../css/profile2.css">
+        <link rel="stylesheet" href="../css/profilepage.css">
         <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.1.min.js"></script>
 
     </head>
@@ -87,12 +87,7 @@
             }
             xhttp.onreadystatechange = function() {
                 if (this.readyState == 4 && this.status == 200) {
-                    if(this.responseText != "no") {
-                        showDetails(this.responseText);
-                    }                    
-                    else {
-                        showDetails(this.responseText);
-                    }
+                    showDetails(this.responseText);
                 }
             };
             xhttp.open("GET", "../php/profileCheck.php", true)

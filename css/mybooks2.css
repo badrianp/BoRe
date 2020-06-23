@@ -142,7 +142,7 @@ body{
     margin-top: 30vh;
     position: absolute;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: flex-start;
     flex-flow: column nowrap;
     align-items: center;
 }
@@ -163,7 +163,7 @@ body{
     padding: 5px;
     background-color: rgba(112, 128, 144);
     margin-bottom: 2em;
-    height: 100px;
+    height: 250px;
     width: 80%;
     min-height: 130px;
     min-width: 220px;
@@ -196,7 +196,7 @@ body{
 
 #addBook:hover{
 
-    border: 1px solid green;
+    border: 1px solid red;
 }
 
 #addBookIcon{
@@ -253,6 +253,10 @@ body{
     padding: 5px;
     overflow: auto; 
 
+}
+
+.meniuBar{
+    margin-top: 1em;
 }
 
 input::placeholder{

@@ -104,14 +104,58 @@ body{
     /* width: 20%; */
 }
 
+.tooltipButton:hover .tooltipInfo{
+    /* visibility: visible; */
+    
+}
+
 .tooltipButton{
     position: relative;
 
+
 }
 
-.tooltipInfo{
+.tooltipInfo{    
     visibility: hidden;
+    /* position: absolute;
+    z-index: 1;
+    top: 50%;
+    left: 50%;
+    margin-left: -20px; */
 }
+
+.meniuDiv2{
+
+    width: 100%;
+    height: 100%;
+    margin-right: 15px;
+    border: none;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-flow: row nowrap ;
+    flex-grow: 4;
+    position: relative;
+}
+
+.meniuBar2{
+
+    z-index: 1000;
+    width: 95%;
+    height: 8%;
+    margin: 4.4em 1em;
+    display: flex;
+    justify-content: center ;
+    flex-flow: row nowrap;
+    align-items: center;
+    position: fixed;
+    top: 0; 
+}
+
+.buttonImage.meniuBar2{
+    display: hide;
+}
+
 .images{
 
     margin-top: 50px;
@@ -140,9 +184,9 @@ body{
     height: 100%;
     width: 75%;
     margin-top: 20%;
-    position: relative;
+    position: absolute;
     display: flex;
-    justify-content: space-between;
+    justify-content: stretch;
     flex-flow: column nowrap;
     align-items: center;
 }
@@ -152,7 +196,7 @@ body{
     /* border: 0.05em solid lightgray; */
     position: relative;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: stretch;
     flex-flow: row nowrap;
 }
 
@@ -164,7 +208,7 @@ body{
     background-color: rgb(200, 204, 164);
     margin-bottom: 2em;
     height: 95%;
-    width: 100%;
+    /* width: 100%; */
     min-height: 230px;
     min-width: 220px;
     max-width: 670px;

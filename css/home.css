@@ -104,13 +104,24 @@ body{
     /* width: 20%; */
 }
 
+.tooltipButton:hover .tooltipInfo{
+    visibility: visible;
+    
+}
+
 .tooltipButton{
     position: relative;
 
+
 }
 
-.tooltipInfo{
+.tooltipInfo{    
     visibility: hidden;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%;
+    left: 50%;
+    margin-left: -60px;
 }
 .images{
 
@@ -140,9 +151,9 @@ body{
     height: 100%;
     width: 75%;
     margin-top: 20%;
-    position: relative;
+    position: absolute;
     display: flex;
-    justify-content: space-between;
+    justify-content: stretch;
     flex-flow: column nowrap;
     align-items: center;
 }
@@ -152,7 +163,7 @@ body{
     /* border: 0.05em solid lightgray; */
     position: relative;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: stretch;
     flex-flow: row nowrap;
 }
 
@@ -164,7 +175,7 @@ body{
     background-color: rgb(200, 204, 164);
     margin-bottom: 2em;
     height: 95%;
-    width: 100%;
+    /* width: 100%; */
     min-height: 230px;
     min-width: 220px;
     max-width: 670px;
