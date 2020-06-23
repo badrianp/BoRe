@@ -5,7 +5,7 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>BoRe</title>
-        <link rel="stylesheet" href="../css/home2.css">
+        <link rel="stylesheet" href="../css/home.css">
         <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.1.min.js"></script>
     </head>
 
@@ -119,9 +119,9 @@
 
             var gen = g;
             // alert (gen);
-            document.getElementById
+            // document.getElementById
             var xhttp = new XMLHttpRequest();
-            xhttp.onreadystatechange = function() {
+            xhttp.onreadystatechange = function(e) {
                 if (this.readyState == 4 && this.status == 200) {
                     if(this.responseText != "not connected") {
                         apply(this.responseText, gen);
@@ -176,7 +176,7 @@
                 addBook.id = "addBook";
                 var addBookIcon = document.createElement("img");
                 addBookIcon.id = "addBookIcon";
-                addBookIcon.src = "../images/remove.png";
+                addBookIcon.src = "../images/reading.png";
 
                 var imagineCarte = bookDetails[i]["imagine"];
                 var descriereCarte = bookDetails[i]["descriere"];

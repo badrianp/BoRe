@@ -100,8 +100,8 @@ body{
 
 .buttonImage{
 
-    height: 45%;
-    /* width: 20%; */
+    /* height: 30%; */
+    width: 20%;
 }
 
 .tooltipButton:hover .tooltipInfo{
@@ -228,23 +228,26 @@ body{
     padding: 5px;
 }
 
-#addBookButton{
+#addBook{
+    opacity: 0.4;
     border-radius: 5px;
     border: 1px solid transparent;
-    background-color: rgba(112, 128, 144);
+    background-color: transparent;
     height: 100%;
     width: 10%;
     align-self: flex-end;
 }
 
-#addBookButton:hover{
-
+#addBook:hover{
+    opacity: 1;
     border: 1px solid green;
 }
 
+
+
 #addBookIcon{
-    height: 32px;
-    width: 38px;
+    /* height: 32px; */
+    width: 80%;
 }
 
 #titlu{
@@ -270,6 +273,10 @@ body{
 
 #postCard:hover{
     opacity: 95%;
+}
+
+#addBook:hover #postCard.postCard{
+    opacity: 0%;
 }
 
 #descriereDiv::-webkit-scrollbar{
@@ -323,7 +330,6 @@ input::placeholder{
 }
 
 .searchBar:focus {
-
 
     color: black;
     border-color: darkgreen;

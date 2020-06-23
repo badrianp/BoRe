@@ -1,12 +1,16 @@
 <?php
     session_Start();
-
+    $v = json_decode(stripslashes(file_get_contents("php://input")));
+    $email = $v->email;
+    $password = $v->password;
+    // echo ($email);
+    
     $con = mysqli_connect('localhost','root','','boredb');
     if (!$con) {
         die('Could not connect: ' . mysqli_error($con));
     }
 
-    $sql="SELECT * FROM utilizatori where email='".$_POST["email"]."' and password='".$_POST["password"]."'";
+    $sql="SELECT * FROM utilizatori where email='".$email."' and password='".$password."'";
     $result = mysqli_query($con,$sql);
 
     if($row = mysqli_fetch_array($result)){

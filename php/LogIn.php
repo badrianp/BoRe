@@ -4,19 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title id="htmlTitle">Login page</title>
-    <link href="../css/login.css" rel="stylesheet">
+    <link href="../css/loginpage.css" rel="stylesheet">
     <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.1.min.js"></script>
 
 </head>
 <body>
     <div class="loginDiv" id="loginDiv">
-        
-        <form action="../php/LogInDatabase.php" onsubmit="return validateForm()" id="div1" class="cardDiv1">
+    <!-- action="" method="POST" onsubmit="" -->
+        <form  name="div1" id="div1" class="cardDiv1">
 
             <p id="welcomeText" class="" id="Item1">Welcome to BoRe!</p>
             <input autofocus value="" type="email" class="labelItem" id="email" name="email" placeholder="email" required>
             <input type="password" class="labelItem" id="password" name="password" placeholder="password" required>
-            <button type="submit" id="logInButton" class="button">Login</button>
+            <button type="submit" id="logInButton" class="button" onclick="validateForm()" >Login</button>
 
         </form>
 
@@ -35,67 +35,38 @@
 
 <script>
 
-    function validateForm()
-    {
-        var x=document.forms["div1"]["email"].value;
-        if(x==""){
-            alert("please enter your email!");
-        }
-        return;
+    function validateForm(){
+
+        var form = document.querySelector('form');
+        var formEmail = document.getElementById("email").value;
+        var formPassword = document.getElementById("password").value;
+        var data = JSON.stringify({"email": formEmail, "password": formPassword});
+        var xhttp = new XMLHttpRequest();
+
+        xhttp.onreadystatechange = function() {
+            // alert("111");
+            if (this.readyState == 4 && this.status == 200) 
+            {
+                // alert ("readystate! ");
+                
+                if(this.responseText != "no") {      
+                    location.replace("../php/Home.php");
+                    alert(this.responseText);
+                }
+                else {
+                    alert("Incorrect email or password!");
+                    document.location.reload();
+                    // alert(this.responseText);
+                }
+            }
+        };
+        
+        xhttp.open("POST", "LogInDatabase.php", true);
+        xhttp.send(data);
 
     }
-
-
-
-
-    $("#div1").submit(function(e)
-    {
-
-        e.preventDefault(); 
-
-        if($('input[name="email"]').val()== "" || $('input[name="password"]').val()== "")
-        {
-
-            alert("Complete every field!")
-            return;
-
-        }
-
-        else
-        {
-
-            var form = $(this);
-            var url = "LogInDatabase.php";
-            
-            $.ajax
-            ({
-
-                type: "POST",
-                url: url,
-                data: form.serialize(),
-                success: function(data)
-                {
-
-                    if (data=="no")
-                    {
-
-                        alert("Incorrect email or password!");
-                        $('input[name="password"]').val("");
-
-                    }else
-                    {
-
-                        alert(data);
-                        location.replace("Home.php");
-                    }
-
-                }
-
-            }); 
-
-        }
-
-    });
+    
+    
 
 </script>
 

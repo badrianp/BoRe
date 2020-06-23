@@ -3,7 +3,7 @@ html{
     padding: 0%;
     background-size: cover;
     /* background-color: rgb(130, 129, 123); */
-    background-image: url('wallpapergray.jpg');
+    background-image: url('../images/wallpapergray.jpg');
 }
 body{
 
@@ -68,12 +68,28 @@ background.loginDiv{
     font-size: 2vw;
     border-radius: 0.5em;
     background-color: rgb(190, 233, 219);
-    opacity: 0.8;
+    opacity: 1;
 
 }
 
 .button:hover{
     opacity: 100% !important;
+}
+
+#logInButton:hover{
+    color:transparent;
+    background-image: url('../images/loginbutton.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 7%;
+}
+
+#logInButton:focus{
+    color:transparent;
+    background-image: url('../images/loginbutton.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 7%;
 }
 
 .cardDiv2{
@@ -117,6 +133,22 @@ background.loginDiv{
     
 }
 
+#signUpButton:hover{
+    color: transparent;
+    background-image: url('../images/straight.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 7%;
+}
+
+#signUpButton:focus{
+    color: transparent;
+    background-image: url('../images/straight.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 7%;
+}
+
 #guestText{
 
     margin-bottom: 0;
@@ -134,9 +166,19 @@ background.loginDiv{
 }
 
 #guestLoginButton:hover{
-    background-image: url('incognito.jpg');
+    color: transparent;
+    background-image: url('../images/incognito.png');
     background-position: center;
     background-repeat: no-repeat;
+    background-size: 7%;
+}
+
+#guestLoginButton:focus{
+    color: transparent;
+    background-image: url('../images/incognito.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 7%;
 }
 
 .labelItem{

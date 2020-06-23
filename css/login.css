@@ -135,7 +135,7 @@ background.loginDiv{
 
 #signUpButton:hover{
     color: transparent;
-    background-image: url('straight.png');
+    background-image: url('../images/straight.png');
     background-position: center;
     background-repeat: no-repeat;
     background-size: 7%;
@@ -143,7 +143,7 @@ background.loginDiv{
 
 #signUpButton:focus{
     color: transparent;
-    background-image: url('straight.png');
+    background-image: url('../images/straight.png');
     background-position: center;
     background-repeat: no-repeat;
     background-size: 7%;
@@ -167,7 +167,7 @@ background.loginDiv{
 
 #guestLoginButton:hover{
     color: transparent;
-    background-image: url('incognito.png');
+    background-image: url('../images/incognito.png');
     background-position: center;
     background-repeat: no-repeat;
     background-size: 7%;
