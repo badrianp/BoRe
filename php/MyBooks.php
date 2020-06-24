@@ -5,7 +5,7 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>My Books</title>
-        <link rel="stylesheet" href="../css/mybookspage.css">
+        <link rel="stylesheet" href="../css/mybookspage2.css">
         <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.1.min.js"></script>
 
     </head>
@@ -19,12 +19,12 @@
                 <spam class="tooltipInfo">Home</spam>
             </div>
 
-            <input type="search" id="searchBar" class="searchBar" placeholder="search here...">
-            
+            <input type="search" onkeyup="searchBooks(this.value)" id="searchBar" class="searchBar" placeholder="search here...">
+
             <div class="meniuDiv">
 
                 <div class="tooltipButton">
-                    <button id="groups" class="meniuBtn"><img class="buttonImage" src="../images/group.png"></button>
+                    <button id="groups" class="meniuBtn" onclick="nothing()"><img class="buttonImage" src="../images/group.png"></button>
                     <spam class="tooltipInfo">My Groups</spam>
                 </div>
 
@@ -34,7 +34,7 @@
                 </div>
 
                 <div class="tooltipButton">
-                    <button id="notifications" class="meniuBtn"><img class="buttonImage" src="../images/notification.png"></button>
+                    <button id="notifications" class="meniuBtn" onclick="nothing()"><img class="buttonImage" src="../images/notification.png"></button>
                     <spam class="tooltipInfo">Notifications</spam>
                 </div>
 
@@ -58,7 +58,7 @@
                 </div>
 
                 <div class="tooltipButton">
-                    <button name="Adventure" id="groups" class="meniuBtn" onclick="getBooksCategory(this.name)">Adventure<img class="buttonImage" src=""></button>
+                    <button name="Adventure" id="my books" class="meniuBtn" onclick="getBooksCategory(this.name)">Adventure<img class="buttonImage" src=""></button>
                     <spam class="tooltipInfo">Adventure</spam>
                 </div>
 
@@ -68,12 +68,12 @@
                 </div>
                 
                 <div class="tooltipButton">
-                    <button name="Science Fiction" id="notifications" class="meniuBtn" onclick="getBooksCategory(this.name)">S.F.<img class="buttonImage" src=""></button>
+                    <button name="Science Fiction" id="my books" class="meniuBtn" onclick="getBooksCategory(this.name)">S.F.<img class="buttonImage" src=""></button>
                     <spam class="tooltipInfo">S.F.</spam>
                 </div>
 
                 <div class="tooltipButton">
-                    <button name="Mystery" id="profile" class="meniuBtn" onclick="getBooksCategory(this.name)" >Mystery<img class="buttonImage"  src=""></button>
+                    <button name="Mystery" id="my books" class="meniuBtn" onclick="getBooksCategory(this.name)" >Mystery<img class="buttonImage"  src=""></button>
                     <spam class="tooltipInfo">Mystery</spam>
                 </div>
 
@@ -95,12 +95,40 @@
         
     <script>
 
+        function nothing(){
+            alert ("This is empty for now. ")
+        }
+
+        function searchBooks(inputText){
+
+            var text = inputText;
+            // alert (text);
+            // document.getElementById
+            var xhttp = new XMLHttpRequest();
+            xhttp.onreadystatechange = function() {
+                if (this.readyState == 4 && this.status == 200) {
+                    raspuns = removeLinebreaks(this.responseText);
+                    if(raspuns != "No matches found!") {
+                        apply(this.responseText, text);
+                        // alert(raspuns);
+                    } else {
+                        alert(raspuns);
+                        document.getElementById("searchBar").value = "";
+                        // document.location.replace("../php/Profile.php");
+                    }
+                }
+            };
+            xhttp.open("GET", "../php/search.php?text=" + text, true);
+            xhttp.send();
+            // return res;
+        }
+
         function getBooksCategory(g){
 
 
             var gen = g;
             // alert (gen);
-            document.getElementById
+            // document.getElementById
             var xhttp = new XMLHttpRequest();
             xhttp.onreadystatechange = function() {
                 if (this.readyState == 4 && this.status == 200) {
@@ -136,9 +164,8 @@
         //     // return res;
         // })();
 
-        // document.getElementById
-
         function apply(y,g){
+            // alert(y);
             document.getElementById("postCards").remove();
             var postCards = document.createElement("div");
                 postCards.id = "postCards";

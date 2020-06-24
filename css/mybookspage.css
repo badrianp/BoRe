@@ -170,19 +170,32 @@ body{
 
 #postCard{
 
+    /* font-size: medium; */
+    /* border-radius: 5px; */
+    /* padding: 5px; */
+    /* background-color: rgba(112, 128, 144); */
+    /* margin-bottom: 2em; */
+    /* height: 30vw; */
+    /* width: 80%; */
+    /* min-height: 150px; */
+    /* min-width: 365px; */
+    /* max-width: 670px; */
+    /* overflow: hidden; */
+    /* opacity: 80%; */
+
+
     font-size: medium;
     border-radius: 5px;
     padding: 5px;
     background-color: rgba(112, 128, 144);
     margin-bottom: 2em;
-    height: 250px;
+    height: 30vw;
     width: 80%;
-    min-height: 150px;
-    min-width: 365px;
+    min-height: 200px;
+    min-width: 300px;
     max-width: 670px;
     /* overflow: hidden; */
     opacity: 80%;
-
 }
 
 #postCardContent{
@@ -285,7 +298,7 @@ body{
 
     z-index: 1000;
     width: 95%;
-    height: 8%;
+    height: 12%;
     margin: 4.4em 1em;
     display: flex;
     justify-content: center ;
@@ -334,6 +347,9 @@ input::placeholder{
 
 }
 
+.searchBar:focus .tooltipButton.meniuBar2{
+    visibility: hidden;
+}
 
 .searchBar:focus::-webkit-input-placeholder{
 

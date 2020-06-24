@@ -18,12 +18,12 @@
                 <spam class="tooltipInfo">Home</spam>
             </div>
 
-            <input type="search" id="searchBar" class="searchBar" placeholder="search here...">
+            <input type="search" id="searchBar" onkeyup="searchBooks(this.value)" class="searchBar" placeholder="search here...">
             
             <div class="meniuDiv">
 
                 <div class="tooltipButton">
-                    <button id="groups" class="meniuBtn"><img class="buttonImage" src="../images/group.png"></button>
+                    <button id="groups" class="meniuBtn" onclick="nothing()"><img class="buttonImage" src="../images/group.png"></button>
                     <spam class="tooltipInfo">My Groups</spam>
                 </div>
 
@@ -33,7 +33,7 @@
                 </div>
 
                 <div class="tooltipButton">
-                    <button id="notifications" class="meniuBtn"><img class="buttonImage" src="../images/notification.png"></button>
+                    <button id="notifications" class="meniuBtn" onclick="nothing()"><img class="buttonImage" src="../images/notification.png"></button>
                     <spam class="tooltipInfo">Notifications</spam>
                 </div>
 
@@ -91,7 +91,9 @@
 
     <script>
         
-        
+        function nothing(){
+            alert ("This is empty for now. ")
+        }
         
         // (function showAll() {
             
@@ -114,6 +116,42 @@
         //     xmlhttp.send();
 
         // })();
+
+        function searchBooks(inputText){
+
+            var text = inputText;
+            // alert (text);
+            // document.getElementById
+            var xhttp = new XMLHttpRequest();
+            xhttp.onreadystatechange = function() {
+                if (this.readyState == 4 && this.status == 200) {
+                    raspuns = removeLinebreaks(this.responseText);
+                    if(raspuns != "No matches found!") {
+                        apply(this.responseText, text);
+                        // alert(raspuns);
+                    } else {
+                        alert(raspuns);
+                        document.getElementById("searchBar").value = "";
+                        // document.location.replace("../php/Profile.php");
+                    }
+                }
+            };
+            xhttp.open("GET", "../php/search.php?text=" + text, true);
+            xhttp.send();
+            // return res;
+        }
+
+        function noResult(text) {
+            var message = text;
+            document.getElementById("postCards").remove();
+            var postCards = document.createElement("div");
+                postCards.id = "messageBox";
+                postCards.className = "messageBox";
+                postCards.innerHTML = message;
+                postCards.style = "font-size: 70%;";
+            document.body.appendChild(postCards);
+
+        }
 
         function getBooksCategory(g) {
 
